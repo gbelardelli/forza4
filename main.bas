@@ -1,15 +1,16 @@
 10 print"{clear}"
-20 poke53281,1:poke53280,1
+20 poke53281,12:poke53280,12
 30 rem 0 = turno1 e 2 mosse usate
 40 st(0)=1:st(1)=0:st(2)=0:st(3)=0
-
+50 print"{black}inizializzazione quantistica..."
 100 rem ************************************
 101 rem copia 64 caratteri da rom a ram
 110 rm=38912
-120 poke53272,(peek(53272)and240)or14
-130 poke56334,peek(56334)and254:poke1,peek(1)and251
-140 fori=14336to14848:pokei,peek(i+rm):next
-150 poke1,peek(1)or4:poke56334,peek(56334)or1
+120 poke56334,peek(56334)and254:poke1,peek(1)and251
+130 fori=14336to14848:pokei,peek(i+rm):next
+140 poke1,peek(1)or4:poke56334,peek(56334)or1
+150 print"{clear}":poke53272,(peek(53272)and240)or14
+160 print"{black}plasmatura del mondo conosciuto"
 
 200 rem ************************************
 201 rem definizione dei nuovi caratteri
@@ -36,6 +37,8 @@
 410 data 0,252,254,30,15,199,231,231 : REM CHARACTER 45
 420 data 0,63,127,120,240,227,231,231 : REM CHARACTER 46
 430 data 0,48,120,120,48,0,0,0 : REM CHARACTER 47
+440 print"{clear}"
+450 print"{black}creazione degli spiriti supremi"
 
 500 rem ************************************
 501 rem definizione sprite pedina
@@ -47,7 +50,7 @@
 560 data 63,255,248,63,255,248,31,255,240
 570 data 31,255,240,15,255,224,7,255,192
 580 data 1,255,0,0,124,0
-590 poke53280,1
+590 poke53280,12:fori=0to200:next:print"{clear}"
 
 600 rem ***************************************
 601 rem schermata iniziale
@@ -62,13 +65,13 @@
 690 print " {yellow}&     ";chr$(34);"+++# &   & ";chr$(34);"++++ &   &       &"
 700 print ""
 710 print "{dark gray}++++++++++++++++++++++++++++++++++++++++";
-720 print "     {light green}.,,,,,,,,,,,,,,,,,,,,,,,,,,,,-"
-730 print "     &%%%%    {green}scritto  da:    {light green}%%%%&"
-740 print "     &%%% {red}gianluca  belardelli {light green}%%%&"
+720 print "     {light gray}.,,,,,,,,,,,,,,,,,,,,,,,,,,,,-"
+730 print "     &%%%%    {dark gray}scritto  da:    {light gray}%%%%&"
+740 print "     &%%% {light green}gianluca  belardelli {light gray}%%%&"
 750 print "     &%%                        %%&"
-760 print "     &%          {green}per             {light green}%&"
-770 print "     &%   {red}r{green}etro{red}p{green}rogramming  {red}i{green}t   {light green}%&"
-780 print "     &%%%   {green}forza4 challenge   {light green}%%%&"
+760 print "     &%          {dark gray}per             {light gray}%&"
+770 print "     &%   {red}r{light green}etro {red}p{light green}rogramming {red}i{light green}t   {light gray}%&"
+780 print "     &%%%   {light green}forza4 challenge   {light gray}%%%&"
 790 print "     ";chr$(34);"{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}{arrow left}#"
 800 print ""
 810 print "       {red}premi un tasto per giocare"
@@ -81,9 +84,9 @@
 872 ifpl=1thenprint "{yellow}++++++++++++++++++++++++++++++++++++++++":goto880
 875 print "{red}++++++++++++++++++++++++++++++++++++++++"
 880 print"{black} giocatore";pl;"scegli come vuoi giocare:":print
-890 print"    1/joystick porta 1"
-900 print"    2/joystick porta 2"
-910 print"    3/tastiera"
+890 print"    premi 1 per joystick in porta 1"
+900 print"    premi 2 per joystick in porta 2"
+910 print"    premi 3 per usare la tastiera"
 915 print
 916 ifpl=1thenprint "{yellow}++++++++++++++++++++++++++++++++++++++++":goto920
 917 print "{red}++++++++++++++++++++++++++++++++++++++++"
@@ -92,10 +95,10 @@
 940 ifa$="1"thengi(pl)=2:goto990
 950 ifa$="2"thengi(pl)=1:goto990
 960 ifa$="3"thengi(pl)=0
-970 print:print"{blue},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,";
-971 print" {pink}per giocare con la tastiera bisogna"
+970 print:print"{dark gray},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,";
+971 print" {blue}per giocare con la tastiera bisogna"
 980 print" premere i tasti numerici che indicano":print" la colonna"
-981 print"{blue},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,";
+981 print"{dark gray},,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,";
 990 print:print:print"      {black}premi un tasto per ";
 991 ifpl=1thenprint"continuare":goto998
 992 print"iniziare":goto999
@@ -133,9 +136,9 @@
 1300 rem ******************************************
 1301 rem definizione colori per extended color mode
 1302 rem sprite 1 colore, priority e coord
-1310 poke53281,1:poke53282,7:poke53283,2:poke53284,6
+1310 poke53281,12:poke53282,7:poke53283,2:poke53284,6
 1320 poke53265,peek(53265)or64
-1330 poke2040,255:rem puntatore sprite
+1330 poke2041,255:rem puntatore sprite
 1340 poke53275,255:rem low priority
 
 1400 rem *************************************
@@ -280,7 +283,7 @@
 
 
 3500 rem color flash
-3510 forl=0to12:fori=0to15
+3510 forl=0to10:fori=0to15
 3512 wait53265,128:poke53284,i
 3516 next:next
 3518 goto4000
@@ -292,32 +295,28 @@
 4010 print:print"{clear}":st(pl)=st(pl)+1
 4020 ifpl=1thenprint "{yellow}++++++++++++++++++++++++++++++++++++++++":goto4040
 4025 ifp2=1thenprint "{red}++++++++++++++++++++++++++++++++++++++++":goto4040
-4030 print "{gray}++++++++++++++++++++++++++++++++++++++++"
+4030 print "{dark gray}++++++++++++++++++++++++++++++++++++++++"
 4035 print"    {black}partita pareggiata"
 4038 goto4050
 4040 print"    {black}ha vinto il giocatore";pl
 4050 print"    dopo";st(0);"turni"
 4060 print
-4070 print"    totale vittorie giocatore 1";st(1)
-4080 print"    totale vittorie giocatore 2";st(2)
-4090 print"    pareggi                    ";st(3)
+4070 print"    totale vittorie giocatore 1  ";st(1)
+4080 print"    totale vittorie giocatore 2  ";st(2)
+4090 print"    pareggi                      ";st(3)
 4095 print
 4100 ifpl=1thenprint "{yellow}++++++++++++++++++++++++++++++++++++++++":goto4120
 4105 ifp2=1thenprint "{red}++++++++++++++++++++++++++++++++++++++++":goto4120
-4110 print "{gray}++++++++++++++++++++++++++++++++++++++++"
+4110 print "{dark gray}++++++++++++++++++++++++++++++++++++++++"
 4120 print:print
-4130 print"  {orange}se volete continuare a giocare"
-4140 print"  premere 1 e per finire premere"
-4150 print"  un qualsiasi tasto"
+4130 print"  {blue}se volete continuare a giocare"
+4140 print"  premere spazio altrimenti"
+4145 print"  premere un qualsiasi altro tasto{black}"
 4160 geta$:ifa$=""then4160
-4170 ifa$="1"thengoto1000
-4180 remsys64738
+4170 ifa$=" "thengoto1000
+4180 print"{clear}"
+4190 poke0,47:poke1,55:poke53280,14:poke53281,6:poke53272,21:poke646,14
+4200 restore
 
 
-5000 rem draw table
-5010 rem print"{clear}"
-5020 forr=0to5:forc=0to6
-5030 rem ift(r,c)=0thenprint"@";:goto2050
-5040 printt(r,c);
-5050 nextc:print"":nextr
 
