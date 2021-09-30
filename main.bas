@@ -283,7 +283,7 @@
 
 
 3500 rem color flash
-3510 forl=0to10:fori=0to15
+3510 forl=0to8:fori=0to15
 3512 wait53265,128:poke53284,i
 3516 next:next
 3518 goto4000
@@ -314,7 +314,7 @@
 4145 print"  premere un qualsiasi altro tasto{black}"
 4160 geta$:ifa$=""then4160
 4170 ifa$=" "thengoto1000
-4180 print"{clear}"
+4180 poke53265,27:print"{clear}"
 4190 poke0,47:poke1,55:poke53280,14:poke53281,6:poke53272,21:poke646,14
 4200 restore
 
