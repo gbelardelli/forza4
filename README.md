@@ -1,3 +1,3 @@
-# forza4
-C64 Basic V2 - Forza 4
-[RetroprogrammingIT](https://l.facebook.com/l.php?u=https%3A%2F%2Fyoutu.be%2F_K3pV-9KP8Q%3Ffbclid%3DIwAR0CP_pvVCyTiKQ-wzzG7qSLsrYEJCbqNSmm65l-lbZroUSVO3MwHoQrYZk&h=AT07hc9ZDoH81TAyKAqmxSfT6AVc7XDybsGprJSBagCvY6mfjA5Ha2B3ydfJpQ-c1Xi5-nvV89F7-iLo7Ngg6oAKOutO_N2KmOLcAd7mQiRManU_Rp9K9_wV1SEICliauA&__tn__=-UK-R&c[0]=AT1AW99SUfz2FEmxZSkNw_GVzcD1Tp1LKZAPK1iSxIVpeLiKiQChP-S2pp__IIs-BZ31WhOLWCeyFKUTsvtv5j3v1H7gM8WtRF3jOzJlXCwdyb8Gujoigo-5RdEoUr7iJ_gMjjEEvoPj4VPgNDldYExYTw2_Zb2HpJ0)
+# Forza 4
+E' un semplice clone di Forza 4 scritto per il Commodore 64 in Basic V2 per partecipare al contest [Forza4 Challenge]https://www.facebook.com/groups/retroprogramming/permalink/804753086871615 presente sul gruppo facebook [Retroprogramming Italia]https://www.facebook.com/groups/retroprogramming
+
